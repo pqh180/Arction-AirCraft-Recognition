@@ -17,7 +17,8 @@ This is an open source project to help those who is interested to Airplane but w
 > pip install PyQt5  
 > pip install pillow  
 > pip install efficientnet-pytorch  
-> pip install numpy  
+> pip install numpy
+> pip install ultralytics    
 
 # Test
 ## 航空摄影网站（如airliners.net）上有许多可下载的高质图片可供尝试
