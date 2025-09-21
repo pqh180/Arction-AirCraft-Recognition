@@ -182,7 +182,7 @@ class ClassifierApp(QWidget):
         layout = QVBoxLayout()
 
         self.img_label = QLabel('拖拽图片或点击选择图片（侧面图片识别率高）')
-        self.img_label.setFixedSize(300, 300)
+        self.img_label.setFixedSize(500, 500)
         self.img_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(self.img_label)
 
@@ -210,7 +210,7 @@ class ClassifierApp(QWidget):
     def showImage(self, img_path):
         self.img_path = img_path
         self.pil_img = None
-        pixmap = QPixmap(img_path).scaled(300, 300, Qt.KeepAspectRatio)
+        pixmap = QPixmap(img_path).scaled(500, 500, Qt.KeepAspectRatio)
         self.img_label.setPixmap(pixmap)
         self.result_label.setText('图片已加载，请点击“开始识别”')
 
@@ -246,7 +246,7 @@ class ClassifierApp(QWidget):
         self.result_label.setText(res_text)
 
 if __name__ == '__main__':
-    model_path = 'seefficientnetb3_60%31.pth' # 改成你的模型文件名
+    model_path = 'seefficientnetb3_60.31.pth' 
     classes = load_classes('classes.txt')    # 推荐用classes.txt保存你的类别名
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = load_model(model_path, num_classes=len(classes), device=device)
@@ -256,4 +256,5 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = ClassifierApp(model, classes, device, yolo_path=yolo_path)
     ex.show()
+
     sys.exit(app.exec_())
