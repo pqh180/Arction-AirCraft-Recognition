@@ -12,7 +12,7 @@ This is an open source project to help those who is interested to Airplane but w
 > .pth文件从release中下载
 
 使用Python编译器打开文件夹即可运行
-> 需要配置环境：
+> 需要配置环境：  
 > pip install torch torchvision torchaudio  
 > pip install PyQt5  
 > pip install pillow  
