@@ -17,7 +17,7 @@ This is an open source project to help those who is interested to Airplane but w
 > pip install PyQt5  
 > pip install pillow  
 > pip install efficientnet-pytorch  
-> pip install numpy
+> pip install numpy   
 > pip install ultralytics    
 
 # Test
